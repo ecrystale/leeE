@@ -8,16 +8,26 @@ K08 -- Fill Yer Flask
 from flask import Flask
 app=Flask(__name__)
 
-@app.route("/") #creates default route
-def hello_world():  #specific to the route before it only
-    return "HW#8 first route"
+#route links
+def first():
+    return '<a href="/"> First Route </a>'
 
-@app.route("/elee") #adding "/elee" at the end changes the website
+def second():
+    return '<a href="/elee"> Second Route </a>'
+
+def third():
+    return '<a href="/19"> Third Route </a>'
+
+@app.route("/")
+def hello_world(): #words on pages + links
+    return "HW#8 first route <br/><br/>"+second()+"<br/><br/>"+third()
+
+@app.route("/elee") #different route
 def hello_world2():
-    return "HW#8 second route"
+    return "HW#8 second route <br/><br/>"+first()+"<br/><br/>"+third()
 
-@app.route("/19") #"/19" = another website 
+@app.route("/19") 
 def hello_world3():
-    return "HW#8 third route"
+    return "HW#8 third route <br/><br/>"+first()+"<br/><br/>"+second()
 
-app.run() #gives only the default route
+app.run()
