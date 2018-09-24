@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+	<th>{{first}}</th>
+	<th>{{second}}</th>
+    {% for key,value in dict.items() %}
+      <tr>
+	<td>{{key}}</td>
+	<td>{{value}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
+
+      
