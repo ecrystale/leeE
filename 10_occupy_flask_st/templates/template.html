@@ -1,3 +1,9 @@
+<!--
+wuleeSweater-Jeffrey Wu, Emily Lee
+SoftDev1 pd6
+K#10 -- Jinja Tuning 
+2018-09-23
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,10 +13,10 @@
     Random occupation: {{randomocc}}
     <table>
       <tr>
-	<th>{{first}}</th>
-	<th>{{second}}</th>
+	<th>{{first}}</th> <!-- heading of the first column -->
+	<th>{{second}}</th> <!-- heading of the second column -->
       </tr>
-      {% for key,value in diction.items() %}
+      {% for key,value in diction.items() %} <!--items() has the first variable as the key of the dictionary and the 2nd variable as the value  -->
       <tr>
 	<td>{{key}}</td>
 	<td>{{value}}</td>
