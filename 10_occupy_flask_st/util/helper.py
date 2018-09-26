@@ -35,11 +35,10 @@ def createDict():
     for line in file:
         place=first(line) #finds the comma/ where to split the line
         if(isnum(line[place+1:len(line)-1])): #filters if the line has a percentage (therefore is an occupation)
-            if(line[0]=='"'): #takes out quotes
-                occ[line[1:place-1]]=float(line[place+1:len(line)-1])
-            else:
+            if line[0] != '"':
                 occ[line[0:place]]=float(line[place+1:len(line)-1]) #splits the line into the "key" before the comma and the "value" afterwards
-
+            else:
+                occ[line[1:place-1]]=float(line[place+1:len(line)-1]) #remove quotes
 
 
 def getDict():
