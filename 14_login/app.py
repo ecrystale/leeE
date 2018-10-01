@@ -17,11 +17,11 @@ def login():
 def auth():
     session["watermelon"]="juice"
     if request.form["user"]!="watermelon":
-        return redirect(url_for("login"))
+        return render_template("/practice.html", error="Wrong Username")
     if request.form["pass"]!=session["watermelon"]:
-        return redirect(url_for("login"))
-    if request.form["pass"]==session["watermelon"]:
-        return render_template("/welcome.html")
+        return render_template("/practice.html", error="Wrong Password")
+    else:
+        return render_template("/welcome.html",user="watermelon")
         
 if __name__=="__main__":
     app.debug=True
