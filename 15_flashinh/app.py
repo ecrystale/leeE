@@ -26,18 +26,19 @@ def login():
 def auth():
 
     session["watermelon"]="juice" #hard code user and pass
-    
-    #wrong username/pass
+            
+        #wrong username/pass
     if request.form["user"]!="watermelon":
         flash('Wrong username or password!')
-        #session.pop('watermelon')
-        return render_template("/login.html")
-    
+        session.pop("watermelon")
+        return redirect(url_for("login"))
+            
     if request.form["pass"]!=session["watermelon"]:
         flash('Wrong password!')
-        return render_template("/login.html")
+        session.pop("watermelon")
+        return redirect(url_for("login"))
 
-    
+        
     #right username and pass, go to welcome page!
     if request.form["pass"]==session["watermelon"]:
         return render_template("/welcome.html",
