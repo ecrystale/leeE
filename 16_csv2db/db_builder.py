@@ -18,7 +18,7 @@ c.execute("CREATE TABLE students(id INTEGER PRIMARY KEY, name TEXT, age INTEGER)
 c.execute("CREATE TABLE courses(id INTEGER, code TEXT, mark INTEGER)")
 
 #students
-with open("templates/peeps.csv", newline='') as csvfile:
+with open("data/peeps.csv") as csvfile:
     reader=csv.DictReader(csvfile)
     for row in reader:
         # print (row["name"], row["age"], row["id"])
@@ -28,7 +28,7 @@ with open("templates/peeps.csv", newline='') as csvfile:
         # print(command)
 
 #courses
-with open("templates/courses.csv") as csvfile:
+with open("data/courses.csv") as csvfile:
     reader=csv.DictReader(csvfile)
     for row in reader:
         # print(row["id"], row["code"], row["mark"])
