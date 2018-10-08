@@ -31,7 +31,7 @@ def peeps_avg(grades):
 #def display():
 
 def addcourses(c,g,i):
-    with open("templates/courses.csv","a",newline='') as file:
+    with open("data/courses.csv","a",newline='') as file:
         fields=["code","grade","idnum"]
         writer=csv.DictWriter(file,fieldnames=fields)
         writer.writerow({"code":str(c),"grade":str(g),"idnum":str(i)})

@@ -20,14 +20,14 @@ open(DB_FILE,'w').close() #Reset DB file
 command = "CREATE TABLE peeps(name TEXT, age INTEGER, id INTEGER)"          #build SQL stmt, save as string
 c.execute(command)    #run SQL statement
 
-with open('templates/peeps.csv','r') as csvfile:
+with open('data/peeps.csv','r') as csvfile:
     reader = csv.DictReader(csvfile) #Create csv dictionary
     for row in reader:
         #Add values into peeps table
         c.execute("INSERT INTO peeps VALUES(" + "'" + row['name'] + "'," + row['age'] + "," + row['id'] + ")")
 
 c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)") #Make new table
-with open('templates/courses.csv','r') as csvfile:
+with open('data/courses.csv','r') as csvfile:
     reader = csv.DictReader(csvfile) #Create csv dictionary
     for row in reader:
         #Add values into courses table
