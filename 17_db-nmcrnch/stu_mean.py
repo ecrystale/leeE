@@ -25,7 +25,7 @@ def compAvg():
     return(grades)
 
 def peeps_avg(grades):
-    #c.execute("CREATE TABLE peeps_avg(name STRING, avg INTEGER)")
+    c.execute("CREATE TABLE peeps_avg(name STRING, avg INTEGER)")
     for idnum,avg in grades.items():
         c.execute("INSERT INTO peeps_avg VALUES(" + str(idnum) + ","+str(avg[1])+")")
 #def display():
