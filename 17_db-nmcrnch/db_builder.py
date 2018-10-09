@@ -1,7 +1,7 @@
-#Pineapple Pizza - Ricky Lin, Kevin Lin
-#SoftDev1 pd0
-#SQLITE3 BASICS
-#2018-10-04
+#StewMeen - Emily Lee, Ricky Lin
+#SoftDev1 pd06
+#K17: Average
+#2018-10-09 T
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitates CSV I/O
