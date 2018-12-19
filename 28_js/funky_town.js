@@ -14,3 +14,10 @@ var gcd=function(a,b){
 	return b;
     return gcd(b%a,a);
 };
+
+var students=['a','b','c','d','e','f','g'];
+
+var randomStudent=function(){
+    var num=Math.floor(Math.random() * students.length)
+    return students[num];
+};
