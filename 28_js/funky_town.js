@@ -1,3 +1,9 @@
+/*
+Mileeon -- Mohammed Jamil, Isaac Jon, Emily Lee
+SoftDev1 pd6
+K#28 -- Sequential Progression
+2018-12-19  
+*/
 var fibonacci=function(num){
     if(num==0){
 	return 0;
