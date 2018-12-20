@@ -59,3 +59,4 @@ var randstud = function() {
 fibbut.addEventListener('click', fib7);
 gcdbut.addEventListener('click', gcd32_24);
 rsbut.addEventListener('click', randstud);
+
